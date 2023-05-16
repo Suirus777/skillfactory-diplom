@@ -1,5 +1,5 @@
-# SkillFactory Дипломный проект Group32
-
+# Дипломный проект.
+SkillFactory / Group32
 <H1> Спринт 1. </H1>
 <H2> Цель: </H2>
 Создать Kubernets Cluster <br>
