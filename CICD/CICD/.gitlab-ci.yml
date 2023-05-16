@@ -1,0 +1,35 @@
+---
+stages:
+  - build
+  - deploy
+
+docker_build:
+  stage: build
+  rules:
+    - if: $CI_TAG =~ /^v\d+.\d+/
+      exists:
+        - Dockerfile
+    - when: on_success
+    - when: manual
+  before_script:
+    - docker info
+    - docker login -u $CI_REG_USER -p $CI_REG_PASSWORD
+  script:
+    - env
+    - export
+    - tag=$CI_TAG
+    - echo "Running build with tag $tag"
+    - docker build -t sairus/diplom:$tag .
+    - docker push sairus/diplom:$tag
+
+app_deploy: 
+  stage: deploy
+  environment: production
+  script:
+    - env
+    - export
+    - tag=$CI_TAG
+    - echo "Deploy my app-dep with build version $tag"
+    - export KUBECONFIG=/opt/.kube/config
+    - helm upgrade --atomic --timeout 600s --set app-dep.tag=$tag --install --namespace $CI_NAMESPACE --create-namespace app-dep https://gitlab.com/suirus777/diplom/-/raw/main/app-dep/app-dep-v1.1.tgz 
+    - kubectl get pods -n $CI_NAMESPACE
