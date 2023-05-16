@@ -67,9 +67,9 @@ b) Подготавливаем настройки для нашего K8S кл�
 - При помощи Ansible устанавливает нужны нам приложения на сервере SRV (Docker, Docker-compose, Gitlab-CI) <br>
 Результат выполнения скрипта: <br>
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/K8S_cluster_create.JPG"> <br>
-
 - Для удаления кластера нужно использовать bash скрипт: cluster_destroy.sh
 <code># bash cluster_destroy.sh </code><br>
-
+Результат выполнения скрипта: <br>
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Terraform_remove_cluster.JPG"> <br>
 
 
