@@ -1,1 +1,1 @@
-# Install k8s cluster with Kubespray on Yandex Cloud
+# SkillFactory Дипломный проект Group32
