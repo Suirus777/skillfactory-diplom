@@ -19,13 +19,22 @@ a) На данном сервере будем хранить весь наш п
 b) Из данного сервера будем разворачивать <b> K8S cluster </b> использовать будем <b> Kubespray </b> разворачивать будем при помощи <b> Ansible </b> и управлять им.<br>
 с) На данном сервере будет выполняться <b> CI/CD piplines </b> <br>
 d) Master и Worker ноды будем разворачивать в <b> Yandex Cloud</b> при помощи <b>Terraform</b> <br>
+e) Мониторинг K8S кластера.<br>
 <br>
-2. Первоначальная настройка сервера <b> SRV </b> 
-a) Устанавливаем все нужные приложения для работы: <br>
-   - Ansible: <br> 
-   - Скачиваем Kubespray по адресу: https://github.com/kubernetes-sigs/kubespray/releases/tag/v2.19.0
+2. Первоначальная настройка сервера <b> SRV </b>  <br>
+a) Устанавливаем все нужные приложения для работы дальнейшей работы: <br>
+   - Python3, PIP3, GIT, остальные зависимости.  
+   - Скачиваем Kubespray по адресу: <a href="https://github.com/kubernetes-sigs/kubespray/releases/tag/v2.19.0"> Kubespray </a>
+   - Ansible (нужную версию Ansible нужно смотреть в документации выбранной версии Kubespray)
+   - Устанавливаем <b> Terraform </b> по инструкции: <a href="https://cloud.yandex.ru/docs/tutorials/infrastructure-management/terraform-quickstart"> Инструкция по установке и настройке Terraform в Ya облаке</a> <br>
+b) Создаём папку для нашего проекта <br>
+c) Делаем git clone проекта в нашу папку <br>
+<code># git clone https://github.com/Suirus777/skillfactory-diplom.git <br>
+d) Распоковываем из архива наш скачаный Kubespray в корень проекта. <br>
+<br>
 
 
+3. Начинаем настройку и установку кластера K8S <br> 
 
 
 
