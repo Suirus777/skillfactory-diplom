@@ -41,11 +41,12 @@ d) Распоковываем из архива наш скачаный Kubespra
 <code># cp private.auto.tfvars.example private.auto.tfvars </code> <br>
    - Открываем файл private.auto.tfvars и вносим наши данные для авторизации Yandex Cloude <br>
 <code>#vim private.auto.tfvars </code> <br>
+<table> <td><tr>(Для информации какие данные нужно вносить)<br>
 ● yc_token – OAuth-токен для доступа к API  <br>
 (https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token) <br>
 ● yc_cloud_id – ID облака (скопировать из консоли управления) <br>
 ● yc_folder_id – ID каталога (скопировать из консоли управления) <br>
-
+</tr></td></table> <br>
 
 
 2. Устанавливаем нужные нам инструменты для дальнейшего создани
