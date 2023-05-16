@@ -11,11 +11,18 @@
 3. В качестве K8S cluster был выбран <b>Kubespray</b> <br>
 4. Cluster K8S будет разворачиваться при помощи <b>Ansible</b> <br>
 5. Для достижения данной цели использовал отличную инструкцию: <b><a href="https://git.cloud-team.ru/lections/kubernetes_setup/raw/master/presentation.pdf">Установка кластера Kubernetes</a> и <a href="https://www.youtube.com/watch?v=WFXlr0bVTAQ">Youtube</a> </b><br>
+<br>
+<H4> Установка и первоначальная настройка сервера <b> SRV </b> </H4>
+1. Устанавливаем в Yandex Cloud сервер <b> SRV </b> <br>
+Задача данного сервера: <br>
+a) На данном сервере будем хранить весь наш проект и управлять им. <br>
+b) Из данного сервера будем разворачивать <b> K8S cluster </b> использовать будем <b> Kubespray </b> разворачивать будем при помощи <b> Ansible </b> и управлять им.<br>
+с) На данном сервере будет выполняться <b> CI/CD piplines </b> <br>
+d) 
 
 
 
 
 
 
-1. Устанавливаем в Yandex Cloud сервер <b> SRV </b>
 2. Устанавливаем нужные нам инструменты для дальнейшего создани
