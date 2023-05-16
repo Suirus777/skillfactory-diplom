@@ -31,7 +31,7 @@ a) Устанавливаем все нужные приложения для р
    - Устанавливаем <b> Terraform </b> по инструкции: <a href="https://cloud.yandex.ru/docs/tutorials/infrastructure-management/terraform-quickstart"> Инструкция по установке и настройке Terraform в Ya облаке</a> <br>
 b) Создаём папку для нашего проекта <br>
 c) Делаем git clone проекта в нашу папку <br>
-<code># git clone https://github.com/Suirus777/skillfactory-diplom.git <br>
+<code># git clone https://github.com/Suirus777/skillfactory-diplom.git </code><br>
 d) Распоковываем из архива наш скачаный Kubespray в корень проекта. <br>
 <br>
 3. Начинаем настройку и установку кластера K8S <br> 
