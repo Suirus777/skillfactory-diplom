@@ -71,6 +71,6 @@ b) Подготавливаем настройки для нашего K8S кл�
 - Для удаления кластера нужно использовать bash скрипт: cluster_destroy.sh
 <code># bash cluster_destroy.sh </code><br>
 Результат выполнения скрипта: <br>
-<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Terraform_remove_cluster.JPG"> <br>
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Terraform_remove_cluster.JPG"> 
 
-
+<H3>4)Кластер установлен и настроен. Готов к деплою нашего приложения. Спринт 1 закончен.</H3>
