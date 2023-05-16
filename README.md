@@ -8,7 +8,10 @@
 <H3>Задание 1. Выбираем облачный провайдер и инфраструктуру. </h3>
 1. В качествет облачного провайдера был выбран <b> Yandex Cloud</b> <br>
 2. В качестве описания серверной инфраструктуры в облаке был выбран <b>Terraform</b> <br>
-3. В качестве K8S cluster был выбран был выбран <b>Kubespray</b> <br>
+3. В качестве K8S cluster был выбран <b>Kubespray</b> <br>
+4. Cluster K8S будет разворачиваться при помощи <b>Ansible</b> <br>
+5. Для достижения данной цели использовал отличную инструкцию: <b><a href="https://git.cloud-team.ru/lections/kubernetes_setup/raw/master/presentation.pdf">Установка кластера Kubernetes</a> и <a href="https://www.youtube.com/watch?v=WFXlr0bVTAQ">Youtube</a> </b><br>
+
 
 
 
