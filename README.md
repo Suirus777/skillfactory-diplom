@@ -88,4 +88,5 @@ Cобрать и задеплоить приложение из нашего Git
 - Чувствительные данные такие как логин и пароль и т.д вынес в отдельный файл "/data/app.var" и добавил в gitignor
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/app.var.JPG">
 - После чего создал Docker образ и запустил приложение в Docker. <br>
+- <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_App.JPG">
  
