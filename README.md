@@ -93,4 +93,4 @@ Cобрать и задеплоить приложение из нашего Git
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_App.JPG">
  - Сдедующим шагом создаём манифесты для деплоя приложения в Kubespray на основе Docker образов приложения: 
  - Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/Kube-manifests
- - 
+ <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Kube_app.JPG">
