@@ -136,10 +136,10 @@ db-dep-798d677548-7clqh    1/1     Running   0          115m   10.233.73.4   wor
 <H3>Задание 3. Описываем стадию деплоя в Helm.</H3>
 - Упаковываем helm chart командой: <br>
 <code>#helm package chart </code><br>
-- Копируем helm chart и package в папку в проекте, где хранится Pipeline и заливаем в проект Gitlab <br>
+- Копируем helm chart и package в папку в проекте, где уже хранится наш созданый Pipeline и заливаем в проект Gitlab <br>
 https://gitlab.com/suirus777/diplom/-/tree/main <br>
-- Создаём вторую стадию Pipeline для приложения - deploy <br>
-- Стадия Deploy должна на основе Helm chart деплоить приложение в K8S кластер. Тригером является изменение тэга: <br>
+- Создаём вторую стадию Pipeline для приложения - <b>"deploy" </b><br>
+- Стадия Deploy должна на основе Helm chart, деплоить приложение в K8S кластер. Тригером является изменение тэга: <br>
 - Результаты работы CI/CD Pipeline: <br>
   Dockerhub:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_hub_tag.JPG ">  
@@ -147,7 +147,7 @@ https://gitlab.com/suirus777/diplom/-/tree/main <br>
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_Helm.JPG">
  Результат работы Pipeline:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_deploy_app.JPG">
- <H3>Pipeline работает согласно задачи сприта. Спринт 2 закончен.</H3>
+ <H3>Pipeline работает согласно задачи спринта. Спринт 2 закончен.</H3>
   <h1> Спринт 3. </h1>
 <H2> Цель: </H2>
 Настройка мониторинга и логирования <br>
