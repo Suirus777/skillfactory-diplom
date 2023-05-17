@@ -112,10 +112,10 @@ Cобрать и задеплоить приложение из нашего Git
 <code># kubectl create namespace diplom </code><br>
 -  Деплоим наше Helm chart в K8S кластер командой в созданый namespace для нашего приложения "diplom": <br>
 <code> # helm upgrade --install -n diplom app-dep . </code><br>
--  Результат, наш проект работает в K8S кластере:
+-  Результат, наш проект работает в K8S кластере:<br>
 <code> root@diplom:/home/odmin# kubectl get pods -n diplom -o wide <br>
 NAME                       READY   STATUS    RESTARTS   AGE    IP            NODE       NOMINATED NODE   READINESS GATES <br>
 app-dep-86b8f9d6c4-4c49j   1/1     Running   2          115m   10.233.73.3   worker-1   <none>           <none> <br>
 db-dep-798d677548-7clqh    1/1     Running   0          115m   10.233.73.4   worker-1   <none>           <none> </code>
-
+<H3>Задание 3. Описываем стадию деплоя в Helm.</H3>
 
