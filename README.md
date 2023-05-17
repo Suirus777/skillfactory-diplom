@@ -84,9 +84,13 @@ Cобрать и задеплоить приложение из нашего Git
 <br>
 <H3>Задание 1. Клонируем репозиторий, собираем его на сервере srv.</H3>
 - Создал в корне проекта "CICD" и клонировал в неё приложение из github.<br> 
+- Путь: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/APP-for-Docker
 - Исправил все ошибки в Docker фалах приложения, настройках приложения и изменил логин и пароль. <br>
 - Чувствительные данные такие как логин и пароль и т.д вынес в отдельный файл "/data/app.var" и добавил в gitignor
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/app.var.JPG">
 - После чего создал Docker образ и запустил приложение в Docker. <br>
-- <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_App.JPG">
- 
+- Результат:
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_App.JPG">
+ - Сдедующим шагом создаём манифесты для деплоя приложения в Kubespray на основе Docker образов приложения: 
+ - Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/Kube-manifests
+ - 
