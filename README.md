@@ -91,9 +91,11 @@ Cобрать и задеплоить приложение из нашего Git
 - После чего создал Docker образ и запустил приложение в Docker. <br>
 - Результат:
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_App.JPG">
- - Подготавливаем CI/CD для автоматизации сборки обаза нашего приложения и деплоя его в Docker registry. <br>
+ - Подготавливаем CI/CD для автоматизации сборки образа нашего приложения и деплоя его в Docker registry. <br>
  - В качестве Docker registry буду использовать Dockerhub  <br>
- <code># Docker login </code> 
+ <code># Docker login </code> <br>
+ 
+ - В качестве CI/CD будем использовать 
  - Сдедующим шагом создаём манифесты для деплоя приложения в Kubespray на основе Docker образов приложения: <br>
  - Чувсвительные данные шифруем и помещаем в манифест credentials.yaml  <br>
  - Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/Kube-manifests 
