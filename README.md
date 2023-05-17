@@ -94,8 +94,12 @@ Cобрать и задеплоить приложение из нашего Git
  - Подготавливаем CI/CD для автоматизации сборки образа нашего приложения и деплоя его в Docker registry. <br>
  - В качестве Docker registry буду использовать Dockerhub  <br>
  <code># Docker login </code> <br>
- 
- - В качестве CI/CD будем использовать 
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/dockerhub_rep.JPG">
+ - В качестве CI/CD будем использовать Gitlab-CI <br>
+ - Путь к проекту: https://gitlab.com/suirus777/diplom/-/tree/main <br>
+ - На сервер SRV, настраиваем Gitlab-Runner по инструкции: <a href="https://docs.gitlab.com/ee/ci/runners/configure_runners.html#use-tags-to-control-which-jobs-a-runner-can-run"> Инструкция </a><br>
+ - Создаём нужные нам переменные:
+
  - Сдедующим шагом создаём манифесты для деплоя приложения в Kubespray на основе Docker образов приложения: <br>
  - Чувсвительные данные шифруем и помещаем в манифест credentials.yaml  <br>
  - Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/Kube-manifests 
