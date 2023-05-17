@@ -98,13 +98,24 @@ Cобрать и задеплоить приложение из нашего Git
  - В качестве CI/CD будем использовать Gitlab-CI <br>
  - Путь к проекту: https://gitlab.com/suirus777/diplom/-/tree/main <br>
  - На сервер SRV, настраиваем Gitlab-Runner по инструкции: <a href="https://docs.gitlab.com/ee/ci/runners/configure_runners.html#use-tags-to-control-which-jobs-a-runner-can-run"> Инструкция </a><br>
- - Создаём нужные нам переменные:
-
+ - Создаём нужные нам переменные для хранения чувствительных данных и другой информации:
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/app.var.JPG">
+ - На первом этапе Pipeline должен войти в DockerHub логин пароль хранятся в gitlab/Variables, на основании Docker файлов создать образ приложения и присовоить тэг из переменной "TAG" в gitlab/Variables и запушить наше приложение с тэгом в DockerHub. 
  - Сдедующим шагом создаём манифесты для деплоя приложения в Kubespray на основе Docker образов приложения: <br>
  - Чувсвительные данные шифруем и помещаем в манифест credentials.yaml  <br>
  - Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/Kube-manifests 
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Kube_app.JPG">
 <H3>Задание 2. Описываем приложение в Helm-чарт.</H3>
 - На основании написаных манифестов создаём helm chart  <br>
-- Путь к helm chart: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/app-dep/chart
-- Подготавливаем наш 
+- Путь к helm chart: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/app-dep/chart <br>
+-  Создаём namespace для нашего приложения "diplom": <br>
+<code># kubectl create namespace diplom </code><br>
+-  Деплоим наше Helm chart в K8S кластер командой в созданый namespace для нашего приложения "diplom": <br>
+<code> # helm upgrade --install -n diplom app-dep . </code><br>
+-  Результат, наш проект работает в K8S кластере:
+<code> root@diplom:/home/odmin# kubectl get pods -n diplom -o wide <br>
+NAME                       READY   STATUS    RESTARTS   AGE    IP            NODE       NOMINATED NODE   READINESS GATES <br>
+app-dep-86b8f9d6c4-4c49j   1/1     Running   2          115m   10.233.73.3   worker-1   <none>           <none> <br>
+db-dep-798d677548-7clqh    1/1     Running   0          115m   10.233.73.4   worker-1   <none>           <none> </code>
+
+
