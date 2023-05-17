@@ -107,17 +107,17 @@ Cобрать и задеплоить приложение из нашего Git
  - Путь к проекту: https://gitlab.com/suirus777/diplom/-/tree/main <br>
  - Заливаем проект приложения в gitlab. <br>
  <code># git add .  <br>
-       # git commit -m "CICD" <br>
-       # git push -u origin main </code> <br>
+# git commit -m "CICD" <br>
+# git push -u origin main </code> <br>
  - Создаём файл, для нашего Pipeline - <b> .gitlab-ci.yml </b> в котором будем описывать этапы сборки образа приложения, а в дальнешем деплоя в K8S <br>  
  - Создаём первую стадию Pipeline для приложения - build <br>
  - На сервере SRV, настраиваем Gitlab-Runner по инструкции: <a href="https://docs.gitlab.com/ee/ci/runners/configure_runners.html#use-tags-to-control-which-jobs-a-runner-can-run"> Инструкция </a><br>
  - Создаём нужные нам переменные для хранения чувствительных данных и другой информации:
-<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/app.var.JPG">
- - На первом этапе Pipeline должен, войти в DockerHub, логин пароль хранятся в gitlab/Variables, на основании Docker файлов создать образ приложения и присовоить ему тэг из переменной "TAG" в gitlab/Variables и запушить наше приложение с тэгом в DockerHub. <br>
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/git_var.JPG">
+ - На первом этапе Pipeline должен, войти в DockerHub, логин пароль хранятся в gitlab/Variables, на основании Docker файлов создать образ приложения и присвоить ему тэг из переменной "TAG" и запушить наше приложение с тэгом в DockerHub. <br>
  Результат работы Pipeline:
- <img src=" ">
- - Сдедующим шагом, создаём манифесты для деплоя приложения в Kubespray на основе Docker образов приложения: <br>
+ <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_APP.JPG">
+ - Сдедующим шагом, создаём манифесты для деплоя приложения в Kubespray, на основе Docker образов приложения: <br>
  - Чувсвительные данные шифруем и помещаем в манифест credentials.yaml  <br>
  - Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/Kube-manifests 
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Kube_app.JPG">
