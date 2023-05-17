@@ -126,8 +126,13 @@ db-dep-798d677548-7clqh    1/1     Running   0          115m   10.233.73.4   wor
 https://gitlab.com/suirus777/diplom/-/tree/main <br>
 - Создаём вторую стадию Pipeline для приложения - deploy <br>
 - Стадия Deploy должна на основе Helm chart деплоить приложение в K8S кластер. Тригером является изменение тэга: <br>
-   Результаты работы CI/CD Pipeline: <br>
-  
+- Результаты работы CI/CD Pipeline: <br>
+  Dockerhub:
+ <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_hub_tag.JPG ">  
+  Изменение тэга:
+ <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_Helm.JPG">
+ Результат работы Pipeline:
+ <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_deploy_app.JPG">
    
    
    
