@@ -98,6 +98,7 @@ Cобрать и задеплоить приложение из нашего Git
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/dockerhub_rep.JPG">
  - В качестве CI/CD будем использовать Gitlab-CI <br>
  - Путь к проекту: https://gitlab.com/suirus777/diplom/-/tree/main <br>
+ - Создаём первую стадию Pipeline для приложения - build <br>
  - На сервер SRV, настраиваем Gitlab-Runner по инструкции: <a href="https://docs.gitlab.com/ee/ci/runners/configure_runners.html#use-tags-to-control-which-jobs-a-runner-can-run"> Инструкция </a><br>
  - Создаём нужные нам переменные для хранения чувствительных данных и другой информации:
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/app.var.JPG">
@@ -119,4 +120,27 @@ NAME                       READY   STATUS    RESTARTS   AGE    IP            NOD
 app-dep-86b8f9d6c4-4c49j   1/1     Running   2          115m   10.233.73.3   worker-1   <none>           <none> <br>
 db-dep-798d677548-7clqh    1/1     Running   0          115m   10.233.73.4   worker-1   <none>           <none> </code>
 <H3>Задание 3. Описываем стадию деплоя в Helm.</H3>
-
+- Упаковываем helm chart командой: <br>
+<code>#helm package chart </code><br>
+- Копируем helm chart и package в папку в проекте, где хранится Pipeline и заливаем в проект Gitlab <br>
+https://gitlab.com/suirus777/diplom/-/tree/main <br>
+- Создаём вторую стадию Pipeline для приложения - deploy <br>
+- Стадия Deploy должна на основе Helm chart деплоить приложение в K8S кластер. Тригером является изменение тэга: <br>
+   Результаты работы CI/CD Pipeline: <br>
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+- 
