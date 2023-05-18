@@ -177,7 +177,7 @@ fluentd-npdxz                                                     1/1     Runnin
 loghouse-f7c55bbf7-9kl2j                                          2/2     Running     0          76m   <br>
 loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Completed   0          76m  </code><br>
 - Результат:
-<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Loghouse.JPG">
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Loghouse1.JPG">
 <H3>Задание 2. Выбор метрик для мониторинга. </H3>   
    
    
