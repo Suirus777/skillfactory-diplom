@@ -109,17 +109,17 @@ Cобрать и задеплоить приложение из нашего Git
  <code># git add .  <br>
 # git commit -m "CICD" <br>
 # git push -u origin main </code> <br>
- - Создаём файл, для нашего Pipeline - <b> .gitlab-ci.yml </b> в котором будем описывать этапы сборки образа приложения, а в дальнешем деплоя в K8S <br>  
+ - Создаём файл, для нашего Pipeline - <b> .gitlab-ci.yml </b> в котором будем описывать этапы сборки образа приложения, а в дальнейшем, деплоя в K8S кластер. <br>  
  - Создаём первую стадию Pipeline для приложения - build <br>
- - На сервере SRV, настраиваем Gitlab-Runner по инструкции: <a href="https://docs.gitlab.com/ee/ci/runners/configure_runners.html#use-tags-to-control-which-jobs-a-runner-can-run"> Инструкция </a><br>
+ - На сервере SRV, настраиваем Gitlab-Runner по инструкции: <a href="https://docs.gitlab.com/ee/ci/runners/configure_runners.html#use-tags-to-control-which-jobs-a-runner-can-run"> Инструкция </a>.<br>
  - Создаём нужные нам переменные для хранения чувствительных данных и другой информации:
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/git_var.JPG">
  - На первом этапе Pipeline должен, войти в DockerHub, логин пароль хранятся в gitlab/Variables, на основании Docker файлов создать образ приложения и присвоить ему тэг из переменной "TAG" и запушить наше приложение с тэгом в DockerHub. <br>
  Результат работы Pipeline:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_APP.JPG">
  - Сдедующим шагом, создаём манифесты, для деплоя приложения в Kubespray, на основе Docker образов приложения: <br>
- - Чувсвительные данные шифруем и помещаем в манифест credentials.yaml  <br>
- - Деплоим наше приложение в K8S: <br>
+ - Чувсвительные данные шифруем и помещаем в манифест <b>"credentials.yaml" </b>.  <br>
+ - Деплоим приложение в K8S кластер: <br>
 <code># kubectl apply -f . </code> <br>
  - Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/Kube-manifests <br>
  - Результат деплоя: <br>
@@ -129,7 +129,7 @@ Cобрать и задеплоить приложение из нашего Git
 - Путь к helm chart: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/app-dep/chart <br>
 -  Создаём <b> namespace </b> для нашего приложения - <b>"diplom" </b>: <br>
 <code># kubectl create namespace diplom </code><br>
--  Деплоим наше Helm chart в K8S кластер в созданый namespace для нашего приложения "diplom", командой: <br>
+-  Деплоим наше Helm chart в K8S кластер, в созданый namespace для нашего приложения "diplom", командой: <br>
 <code> # helm upgrade --install -n diplom app-dep . </code><br>
 -  Результат, наше приложение работает в K8S кластере:<br>
 <code> root@diplom:/home/odmin# kubectl get pods -n diplom -o wide <br>
