@@ -176,13 +176,28 @@ fluentd-kltjb                                                     1/1     Runnin
 fluentd-npdxz                                                     1/1     Running     0          76m  <br>
 loghouse-f7c55bbf7-9kl2j                                          2/2     Running     0          76m   <br>
 loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Completed   0          76m  </code><br>
+- Создаём Dashbourd для сборки логов нашего приложения и кластера K8S <br>
 - Результат:
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Loghouse1.JPG">
 <H3>Задание 2. Выбор метрик для мониторинга. </H3>   
+- Для мониторнига сервера SRV, доступности нашего приложения "APP-DEP" и кластера "K8S" буду использовать стэк <b>Grafana\Prometheus\Blackbox\Node Exporter\Alertmanager </b><br>
+- Весь стэк буду разворачивать на SRV сервере в Docker-compose. <br>
+- Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/monitor/Prometheus_stack <br>
+- Для уставноки нужно перейти в каталог <b>/monitor/Prometheus_stack </b> и развернуть стэк командой:  <br>
+ <code># docker-compose up -d </code> <br>
+- В результате действия комады в докере должен быть развёрнут полный стэк <b>Grafana\Prometheus\Blackbox\Node Exporter\Alertmanager </b>:<br>   
+<code> # docker ps <br>
+root@diplom:/home/odmin# docker ps <br>
+CONTAINER ID   IMAGE                               COMMAND                  CREATED      STATUS             PORTS                                         NAMES <br>
+f0a878fdafcf   metalmatze/alertmanager-bot:0.4.3   "/usr/bin/alertmanag…"   4 days ago   Up 2 hours         8080/tcp                
+alerttelegrambot <br>
+926007453c3b   grafana/grafana                     "/run.sh"                4 days ago   Up About an hour   0.0.0.0:3000->3000/tcp  proometheus_stack_grafana_1 <br>
+66d15207cea7   prom/prometheus:latest              "/bin/prometheus --c…"   4 days ago   Up About an hour   0.0.0.0:9090->9090/tcp                      prometheus_stack_prometheus_1 <br>
+07e195b169e7   prom/blackbox-exporter              "/bin/blackbox_expor…"   4 days ago   Up About an hour   127.0.0.1:9115->9115/tcp                    prometheus_stack_blackbox-exporter_1 <br>
+b2c339e20545   prom/alertmanager:v0.23.0           "/bin/alertmanager -…"   4 days ago   Up 2 hours         0.0.0.0:9093->9093/tcp, :::9093->9093/tcp   prometheus_stack_alertmanager_1 <br>
+017ea14a7638   prom/node-exporter                  "/bin/node_exporter …"   4 days ago   Up 2 hours         0.0.0.0:9100->9100/tcp                      prometheus_stack_node-exporter_1 <br> </code>
    
-   
-   
-   
+
    
    
    
