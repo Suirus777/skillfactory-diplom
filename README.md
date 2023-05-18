@@ -97,7 +97,8 @@ Cобрать и задеплоить приложение из нашего Git
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/app.var.JPG">
 - Собрал Docker образ и запустил приложение в Docker. <br>
 <code># Docker-compose up -d </code> <br>
-- Результат:
+- В резальтате чего создаются 2 докер контенера, Python приложение и БД к нему <br>
+- Проверяем приложение на SRV сервере:
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_App.JPG">
  - Подготавливаем CI/CD для автоматизации сборки образа, нашего приложения и деплоя его в Docker registry. <br>
  - В качестве Docker registry буду использовать Dockerhub.  Логинимся в Dockerhub: <br>
