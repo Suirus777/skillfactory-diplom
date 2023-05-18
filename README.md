@@ -185,10 +185,20 @@ loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Comple
 - Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/monitor/Prometheus_stack <br>
 - Для уставноки нужно перейти в каталог <b>/monitor/Prometheus_stack </b> и развернуть стэк командой:  <br>
  <code># docker-compose up -d </code> <br>
-- В результате действия комады в докере должен быть развёрнут полный стэк <b>Grafana\Prometheus\Blackbox\Node Exporter\Alertmanager </b>:<br>   
+- В результате действия команды в докере, должен быть развёрнут полный стэк <b>Grafana\Prometheus\Blackbox\Node Exporter\Alertmanager </b>:<br>   
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/grafana1.JPG">
-   
-
+- Так же были созданы K8S манифесты для деплоя Prometheus и сбора метрик кластера <br>
+- Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/monitor/Prometheus_stack/k8s  <br>
+- Был создан namespace "monitoring" и в него задеплоин манифест
+<code># kubectl create namespace monitoring <br>
+   #Kubectl apply -f . <br> </code>
+- Результат:  <br>
+<code> root@diplom:/home/odmin# kubectl get pods -n monitoring                 <br>
+NAME                                     READY   STATUS    RESTARTS   AGE      <br>
+prometheus-deployment-599bbd9457-xmdmz   1/1     Running   0          113m     <br>
+- Заходим в Grafana и подключаемся к Prometheus на сервере SRV и в кластере K8S:
+<img src="
+<H3>Задание 3. Настройка дашборда. </H3>
    
    
    
