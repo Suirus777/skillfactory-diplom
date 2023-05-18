@@ -95,7 +95,8 @@ Cобрать и задеплоить приложение из нашего Git
 - Исправил все ошибки в Docker фалах приложения, настройках приложения и изменил логин и пароль. <br>
 - Чувствительные данные такие как логин и пароль и т.д вынес в отдельный файл "/data/app.var" и добавил в gitignor.
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/app.var.JPG">
-- Создал Docker образ и запустил приложение в Docker. <br>
+- Собрал Docker образ и запустил приложение в Docker. <br>
+<code># Docker-compose up -d </code> <br>
 - Результат:
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_App.JPG">
  - Подготавливаем CI/CD для автоматизации сборки образа, нашего приложения и деплоя его в Docker registry. <br>
