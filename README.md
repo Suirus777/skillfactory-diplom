@@ -197,10 +197,16 @@ loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Comple
 NAME                                     READY   STATUS    RESTARTS   AGE      <br>
 prometheus-deployment-599bbd9457-xmdmz   1/1     Running   0          113m     <br>
 - Заходим в Grafana и подключаемся к Prometheus на сервере SRV и в кластере K8S:
-<img src="
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/pom_grafana.JPG">
 <H3>Задание 3. Настройка дашборда. </H3>
-   
-   
+- Для сборки метрик буду использовать "Grafana" <br>
+- Сбор метрик состояния сервера SRV при помощи "Node Exporter":
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Node_exporter.JPG"><br>
+- Сбор метрик о доступности нашего сайта (app-dep) при помощи "BlackBox":  <br>
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/HTTP_Satus_APP_Grafana.JPG"> <br>
+- Сбор метрик о состоянии K8S кластере и на pod - APP-DEP: <br>
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/K8S_cluster_grafana.JPG"><br>
+<H3>Задание 4. Алертинг. </H3>
    
    
    
