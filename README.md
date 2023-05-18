@@ -151,7 +151,7 @@ https://gitlab.com/suirus777/diplom/-/tree/main <br>
  Результат работы Pipeline:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_deploy_app.JPG">
  <H3>Pipeline работает согласно задачи спринта. Спринт 2 закончен.</H3>
-  <h1> Спринт 3. </h1>
+<h1> Спринт 3. </h1>
 <H2> Цель: </H2>
 Настройка мониторинга и логирования. <br>
 <H2> Задача: </H2> 
@@ -208,13 +208,14 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/K8S_cluster_grafana.JPG"><br>
 <H3>Задание 4. Алертинг. </H3>
 - Для отправки алертов буду использовать <b> Telegram </b>. <br>
-- Создал в Telegram нового бота - <b> SkillFactory_diplom </b> . </b> 
+- Создал в Telegram нового бота - <b> SkillFactory_diplom </b> . <br>
 - Был установлен и настроен Docker контенер для для отправки сообщений в Telegram. <br> 
-   
-   
-   
-   
-   
-   
-   
-- 
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/telegrambot.JPG">
+- Все чувствительные данные были вынесены в отдельный файл "/data/tele.var" и добавлен в .gitignor. <br>
+- Добавляем Telegram Bot в стэк Prometheus\Grafana: https://github.com/Suirus777/skillfactory-diplom/blob/main/monitor/Prometheus_stack/docker-compose.yml <br> 
+- Настройка отправки сообщений: https://github.com/Suirus777/skillfactory-diplom/blob/main/monitor/Prometheus_stack/alertmanager/alertmanager.yml <br>
+- Результат работы алертинга, отправка сообщений о статусе приложения в telegram: <br>
+<img src=""> 
+<h2> Спринт 3. Закончен. </h2>
+<h1> Все задания выполнены, диплом закончен! Заранее спасибо!!! </h1>
+<a href="http://158.160.4.27"> Адресс работающего приложения!!!!!!!!!!! </a>
