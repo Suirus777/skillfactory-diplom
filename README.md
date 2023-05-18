@@ -146,7 +146,7 @@ https://gitlab.com/suirus777/diplom/-/tree/main <br>
 - Результаты работы CI/CD Pipeline: <br>
   Образы в Dockerhub:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_hub_tag.JPG ">  
-  Присвоение тэков образам:
+  Присвоение тэгов образам:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_Helm.JPG">
  Результат работы Pipeline:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_deploy_app.JPG">
