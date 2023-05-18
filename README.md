@@ -111,7 +111,7 @@ Cобрать и задеплоить приложение из нашего Git
  <code># git add .  <br>
 # git commit -m "CICD" <br>
 # git push -u origin main </code> <br>
- - Создаём файл, для нашего Pipeline - <b> .gitlab-ci.yml </b> в котором будем описывать этапы сборки образа приложения, а в дальнейшем, деплоя в K8S кластер. <br>  
+ - Создаём файл, для нашего Pipeline - <a href="https://github.com/Suirus777/skillfactory-diplom/blob/main/CICD/CICD/.gitlab-ci.yml"><b> .gitlab-ci.yml </b></a> в котором будем описывать этапы сборки образа приложения, а в дальнейшем, деплоя в K8S кластер. <br>  
  - Создаём первую стадию Pipeline для приложения - build <br>
  - На сервере SRV, настраиваем Gitlab-Runner по инструкции: <a href="https://docs.gitlab.com/ee/ci/runners/configure_runners.html#use-tags-to-control-which-jobs-a-runner-can-run"> Инструкция </a>.<br>
  - Создаём нужные нам переменные для хранения чувствительных данных и другой информации:
