@@ -195,7 +195,7 @@ loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Comple
 - Результат:  <br>
 <code> root@diplom:/home/odmin# kubectl get pods -n monitoring                 <br>
 NAME                                     READY   STATUS    RESTARTS   AGE      <br>
-   prometheus-deployment-599bbd9457-xmdmz   1/1     Running   0          113m     <br></code>
+   prometheus-deployment-599bbd9457-xmdmz   1/1     Running   0          113m    </code>  <br>
 - Заходим в Grafana и подключаемся к Prometheus на сервере SRV и в кластере K8S:<br>
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/pom_grafana.JPG">
 <H3>Задание 3. Настройка дашборда. </H3>
