@@ -117,40 +117,43 @@ Cобрать и задеплоить приложение из нашего Git
  - На первом этапе Pipeline должен, войти в DockerHub, логин пароль хранятся в gitlab/Variables, на основании Docker файлов создать образ приложения и присвоить ему тэг из переменной "TAG" и запушить наше приложение с тэгом в DockerHub. <br>
  Результат работы Pipeline:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_APP.JPG">
- - Сдедующим шагом, создаём манифесты для деплоя приложения в Kubespray, на основе Docker образов приложения: <br>
+ - Сдедующим шагом, создаём манифесты, для деплоя приложения в Kubespray, на основе Docker образов приложения: <br>
  - Чувсвительные данные шифруем и помещаем в манифест credentials.yaml  <br>
- - Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/Kube-manifests 
+ - Деплоим наше приложение в K8S: <br>
+<code># kubectl apply -f . </code> <br>
+ - Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/Kube-manifests <br>
+ - Результат деплоя: <br>
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Kube_app.JPG">
 <H3>Задание 2. Описываем приложение в Helm-чарт.</H3>
-- На основании написаных манифестов создаём helm chart  <br>
+- На основании написаных манифестов создаём <b>helm chart</b>.  <br>
 - Путь к helm chart: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/app-dep/chart <br>
--  Создаём namespace для нашего приложения "diplom": <br>
+-  Создаём <b> namespace </b> для нашего приложения - <b>"diplom" </b>: <br>
 <code># kubectl create namespace diplom </code><br>
--  Деплоим наше Helm chart в K8S кластер командой в созданый namespace для нашего приложения "diplom": <br>
+-  Деплоим наше Helm chart в K8S кластер в созданый namespace для нашего приложения "diplom", командой: <br>
 <code> # helm upgrade --install -n diplom app-dep . </code><br>
--  Результат, наш проект работает в K8S кластере:<br>
+-  Результат, наше приложение работает в K8S кластере:<br>
 <code> root@diplom:/home/odmin# kubectl get pods -n diplom -o wide <br>
 NAME                       READY   STATUS    RESTARTS   AGE    IP            NODE       NOMINATED NODE   READINESS GATES <br>
 app-dep-86b8f9d6c4-4c49j   1/1     Running   2          115m   10.233.73.3   worker-1   <none>           <none> <br>
 db-dep-798d677548-7clqh    1/1     Running   0          115m   10.233.73.4   worker-1   <none>           <none> </code>
 <H3>Задание 3. Описываем стадию деплоя в Helm.</H3>
-- Упаковываем helm chart командой: <br>
+- Упаковываем созданный helm chart в архив, командой: <br>
 <code>#helm package chart </code><br>
-- Копируем helm chart и package в папку в проекте, где уже хранится наш созданый Pipeline и заливаем в проект Gitlab <br>
+- Копируем helm chart и package в папку в проекте, где уже хранится наш созданый CI/CD Pipeline и заливаем в проект Gitlab. <br>
 https://gitlab.com/suirus777/diplom/-/tree/main <br>
-- Создаём вторую стадию Pipeline для приложения - <b>"deploy" </b><br>
+- Создаём вторую стадию Pipeline для приложения - <b>"deploy" </b>.<br>
 - Стадия Deploy должна на основе Helm chart, деплоить приложение в K8S кластер. Тригером является изменение тэга: <br>
 - Результаты работы CI/CD Pipeline: <br>
-  Dockerhub:
+  Образы в Dockerhub:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_hub_tag.JPG ">  
-  Изменение тэга:
+  Присвоение тэков образам:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_Helm.JPG">
  Результат работы Pipeline:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_deploy_app.JPG">
  <H3>Pipeline работает согласно задачи спринта. Спринт 2 закончен.</H3>
   <h1> Спринт 3. </h1>
 <H2> Цель: </H2>
-Настройка мониторинга и логирования <br>
+Настройка мониторинга и логирования. <br>
 <H2> Задача: </H2> 
 1) Настройка сборки логов.  <br>
 2) Выбор метрик для мониторинга.  <br>
