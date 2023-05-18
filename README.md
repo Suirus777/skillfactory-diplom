@@ -215,7 +215,7 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
 - Добавляем Telegram Bot в стэк Prometheus\Grafana: https://github.com/Suirus777/skillfactory-diplom/blob/main/monitor/Prometheus_stack/docker-compose.yml <br> 
 - Настройка отправки сообщений: https://github.com/Suirus777/skillfactory-diplom/blob/main/monitor/Prometheus_stack/alertmanager/alertmanager.yml <br>
 - Результат работы алертинга, отправка сообщений о статусе приложения в telegram: <br>
-<img src=""> 
+<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Telegram_alert.JPG"> 
 <h2> Спринт 3. Закончен. </h2>
 <h1> Все задания выполнены, диплом закончен! Заранее спасибо!!! </h1>
 <a href="http://158.160.4.27"> Адресс работающего приложения!!!!!!!!!!! </a>
