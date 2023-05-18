@@ -168,7 +168,7 @@ https://gitlab.com/suirus777/diplom/-/tree/main <br>
 <code> # helm repo add loghouse https://flant.github.io/loghouse/charts/  </code><br>
 - Устанавливаем стэк <b> Fluentd/Clickhouse/Loghouse </b> в namespace "loghouse". <br>
 <code> # helm install --namespace loghouse --create-namespace -f monitor/loghouse/loghouse-values.yml loghouse loghouse/loghouse </code> <br>
-- Поверяем в K8S кластере: <br>
+- Проверяем в K8S кластере: <br>
 <code> root@diplom:/home/odmin# kubectl get pods -n loghouse <br>
 NAME                                                              READY   STATUS      RESTARTS   AGE  <br>
 clickhouse-server-0                                               2/2     Running     0          76m  <br>
