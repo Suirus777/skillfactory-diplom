@@ -189,10 +189,10 @@ loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Comple
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/grafana1.JPG">
 - Так же были созданы K8S манифесты для деплоя Prometheus и сбора метрик кластера <br>
 - Путь к манифестам: https://github.com/Suirus777/skillfactory-diplom/tree/main/monitor/Prometheus_stack/k8s  <br>
-- Был создан namespace "monitoring" и в него задеплоин манифест
+- Был создан namespace "monitoring" и в него задеплоин манифест: <br>
 <code># kubectl create namespace monitoring <br>
    #Kubectl apply -f . <br> </code>
-- Результат:  <br>
+- Результат:  <br><br>
 <code> root@diplom:/home/odmin# kubectl get pods -n monitoring                 <br>
 NAME                                     READY   STATUS    RESTARTS   AGE      <br>
    prometheus-deployment-599bbd9457-xmdmz   1/1     Running   0          113m     <br></code>
