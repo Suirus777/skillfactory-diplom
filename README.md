@@ -202,6 +202,8 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/All_PODS_K8S.JPG">
 <H3>Задание 3. Настройка дашборда. </H3>
 - Для сборки метрик буду использовать "Grafana" <br>
+- Буду использовать 3 дашборда: <br>
+ <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Dashboards.JPG"> <br>
 - Сбор метрик состояния сервера SRV при помощи "Node Exporter":<br>
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Node_exporter.JPG"><br>
 - Сбор метрик о доступности нашего сайта (app-dep) при помощи "BlackBox":  <br>
