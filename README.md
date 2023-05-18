@@ -161,7 +161,22 @@ https://gitlab.com/suirus777/diplom/-/tree/main <br>
 4) Алертинг.<br>
 <br>
 <H3>Задание 1. Настройка сборки логов. </H3>
-- 
+- Для сборки логов буду использовать стэк <b> Fluentd/Clickhouse/Loghouse </b>. <br>
+- Устанавливать буду с помощью helm. <br>
+- Путь к настройкам стэка: https://github.com/Suirus777/skillfactory-diplom/tree/main/monitor/loghouse <br>
+- Вначале добавим repo для Loghouse <br>
+<code> # helm repo add loghouse https://flant.github.io/loghouse/charts/  </code><br>
+- Устанавливаем стэк <b> Fluentd/Clickhouse/Loghouse </b> в namespace "loghouse". <br>
+<code> # helm install --namespace loghouse --create-namespace -f monitor/loghouse/loghouse-values.yml loghouse loghouse/loghouse </code> <br>
+- Поверяем в K8S кластере: <br>
+<code> root@diplom:/home/odmin# kubectl get pods -n loghouse <br>
+NAME                                                              READY   STATUS      RESTARTS   AGE  <br>
+clickhouse-server-0                                               2/2     Running     0          76m  <br>
+fluentd-kltjb                                                     1/1     Running     0          76m  <br>
+fluentd-npdxz                                                     1/1     Running     0          76m  <br>
+loghouse-f7c55bbf7-9kl2j                                          2/2     Running     0          76m   <br>
+loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Completed   0          76m  </code><br>
+
    
    
    
